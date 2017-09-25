@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    working_directory: ~/devise_security_extension
+    docker:
+      - image: ruby:2.4.2
+        environment:
+          RAILS_ENV: test
+    steps:
+      - checkout
+      - restore_cache:
+          key: gemfile-{{ checksum "Gemfile.lock" }}
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: gemfile-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec rake
