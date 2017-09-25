@@ -1,6 +1,6 @@
 # Devise Security Extension
 
-[![Build Status](https://travis-ci.org/phatworx/devise_security_extension.svg?branch=master)](https://travis-ci.org/phatworx/devise_security_extension)
+[![CircleCI](https://circleci.com/gh/LiveWorld/devise_security_extension.svg?style=svg)](https://circleci.com/gh/LiveWorld/devise_security_extension)
 
 An enterprise security extension for [Devise](https://github.com/plataformatec/devise), trying to meet industrial standard security demands for web applications.
 
